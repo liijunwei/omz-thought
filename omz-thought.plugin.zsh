@@ -28,7 +28,7 @@ function thought() {
   gsed -i "6G" $thoughts_filepath
 
   git add . &&
-  git commit -m "Commit manually." --quiet &&
+  git commit -m "Add thought via cli." --quiet &&
   git push --quiet &&
   hexo clean  >/dev/null &&
   hexo deploy >/dev/null &&
