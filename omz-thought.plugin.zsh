@@ -30,8 +30,8 @@ function thought() {
   git add . &&
   git commit -m "Add thought via cli." --quiet &&
   git push --quiet &&
-  hexo clean  >/dev/null &&
-  hexo deploy >/dev/null &&
+  NODE_OPTIONS="--trace-warnings" hexo clean  >/dev/null &&
+  NODE_OPTIONS="--trace-warnings" hexo deploy >/dev/null &&
   ssh webuser@xiaoli "cd /srv/www/blog-gallary &&
                       git fetch         &&
                       git checkout main &&
